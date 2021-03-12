@@ -10,13 +10,13 @@
         if (fa.riskAddress != '' && fa.city != '' && fa.state != '' && fa.county != '') {
             const jsonPatch = [
                 {op: 'replace', path: '/field_answers/replacementCost', value: 230000},
-                {op: 'replace', path: '/field_answers/protectionClass', value: 'Protected'},
+                {op: 'replace', path: '/field_answers/protectionClass', value: 'protectionClass_protected'},
                 {op: 'replace', path: '/field_answers/protectiveDevices', value: true},
                 {op: 'replace', path: '/field_answers/firewiseCommunity', value: false},
                 {op: 'replace', path: '/field_answers/solarPanelsPresent', value: false},
                 {op: 'replace', path: '/field_answers/hasThereBeenAClaimInTheLast5Years2', value: false},
                 {op: 'replace', path: '/field_answers/covALimit', value: 230000},
-                {op: 'replace', path: '/field_answers/form', value: 'Form 1'},
+                {op: 'replace', path: '/field_answers/form', value: 'form_form1'},
             ]
             // Simulate a normal delay when looking up information
             setTimeout(() => { this.parent.updateRisk(jsonPatch); }, 500);
